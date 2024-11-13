@@ -1,0 +1,173 @@
+:root {
+    --moderate-violet: hsl(263, 55%, 52%);
+    --Very-dark-grayish-blue: hsl(217, 19%, 35%);
+    --Very-dark-blackish-blue: hsl(219, 29%, 14%);
+    --White: hsl(0, 0%, 100%);
+    --gray: hsl(0, 0%, 81%);
+    --Light-grayish-blue: hsl(210, 46%, 95%);
+}
+
+html {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--Light-grayish-blue);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+aside {
+    width: 100%;
+}
+
+main {
+    width: 100%;
+    height: 100%;
+}
+
+.container {
+    border-radius: 20px;
+    width: 94%;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    place-items: center;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+main .secction-one {
+    gap: 20px;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    margin: 20px;
+}
+
+main .secction-two {
+    gap: 20px;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    margin: 20px;
+}
+
+.testimonials {
+    border-radius: 10px;
+}
+
+.testimonial-one,
+.testimonial-two,
+.testimonial-four {
+
+    h4,
+    h2 {
+        color: var(--White);
+    }
+
+    p {
+        color: var(--gray);
+    }
+}
+
+.testimonial-three,
+.testimonial-five {
+
+    h4,
+    h2 {
+        color: var(--Very-dark-blackish-blue);
+    }
+
+    p {
+        color: var(--Very-dark-grayish-blue);
+    }
+}
+
+.testimonial-one {
+    background-color: var(--moderate-violet);
+    padding: 20px;
+    position: relative;
+}
+
+.testimonial-one::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 200px;
+    height: 100px;
+    opacity: .6;
+    z-index: 1;
+    background-image: url('./images/bg-pattern-quotation.svg');
+    /* Ruta de tu imagen de comillas */
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.testimonial-one h2,
+h4,
+p {
+    position: relative;
+    z-index: 2;
+
+}
+
+.testimonial-two {
+    background-color: var(--Very-dark-grayish-blue);
+    padding: 20px;
+}
+
+.testimonial-three {
+    background-color: var(--White);
+    padding: 20px;
+}
+
+.testimonial-four {
+    background-color: var(--Very-dark-blackish-blue);
+    padding: 20px;
+}
+
+.testimonial-five {
+    background-color: var(--White);
+    padding: 20px;
+    margin: 20px;
+}
+
+/* Design card profile */
+.profile {
+    display: flex;
+    align-items: center;
+}
+
+.profile img {
+    border-radius: 50%;
+    width: 40px;
+}
+
+.profile .profile--info {
+    margin-left: 20px;
+
+    h4,
+    p {
+        margin: 0;
+
+    }
+}
+
+/* Design movile */
+@media (max-width: 700px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    @media (max-width:500px) {
+
+        main .secction-one,
+        main .secction-two {
+            display: flex;
+            flex-direction: column;
+
+        }
+    }
+}
